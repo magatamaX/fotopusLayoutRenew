@@ -1,0 +1,138 @@
+@charset "utf-8";
+
+#wrapper.photocon {
+    .photocon {
+        &_section {
+            @include mt(20px);
+            
+            &_inner {
+                @include mg(20px auto, 20px 20px 20px);
+                max-width: 920px;
+                position: relative;
+
+                &.mt0 {
+                    margin-top: 0 !important;
+                }
+            }
+        }
+        &_head {
+            border-bottom: 3px solid #d6d6d6;
+            &_kv {
+                a {
+                    img {
+                        max-width: 100%;
+                    }
+                    &:hover {
+                        opacity: 0.8;
+                    }
+                }
+            }
+            &_ttl {
+                @include fontSize(20px);
+                text-align: center;
+                @include mg(30px 0);
+                display: block;
+            }
+        }
+        &_hdbutton {
+            position: absolute;
+            top: 0;
+            right: 0;
+            a {
+                display: inline-block;
+                @include pd(10px 20px 10px 35px);
+                @include fontSize(14px);
+                border: 0;
+                line-height: 1.8;
+                color: #fff;
+                background-color: #4c79a6;
+                background-image: url(/selfIntroduction/images/common/hd.png);
+                background-repeat: no-repeat;
+                background-size: 10px;
+                background-position: center left 25px;
+                border-radius: 5px;
+                text-align: center;
+                text-indent: 5px;
+                outline: none;
+                text-decoration: none;
+                &:hover {
+                    color:#000;
+                    background-color:#d6d6d6;         
+                }
+            }
+            @include max( m ) {
+                position: static;
+                top: auto;
+                right: auto;
+                text-align: center;
+                margin: 30px 0;
+            }
+        }
+        &_pager {
+            text-align: center;
+            font-size: 0;
+
+            & > * {
+                @include fontSize(14px);
+                display: inline-block;
+                @include mg(0 5px);
+                @include pd(10px 15px, 5px 10px);
+                border: 1px solid #e5e5e5;
+                text-decoration: none;
+                @include mb(0,10px);
+            }
+
+        }
+        &_listOrder {
+            @include mt(20px);
+            text-align: center;
+            font-size: 0;
+            &_item {
+                display: inline-block;
+
+                & > * {
+                    color: #fff;
+                    display: block;
+                    @include fontSize(14px);
+                    @include pd(10px 20px);
+                    @include mg(0 5px);
+                    color: #000;
+                    background-color: #d6d6d6;
+                    border-radius: 5px;
+                }
+                & > a {
+                    text-decoration: none;
+                    background-color: #4c79a6;
+                    color: #fff;
+                    &:hover {
+                        color:#000;
+                        background-color:#d6d6d6;
+                    }
+                }
+            }
+        }
+        &_subscribe {
+            text-align: center;
+            @include mg(50px 0 60px, 30px 0 40px);
+            &_btn {
+                text-decoration: none;
+                color: #fff;
+                @include pd(20px 40px 20px 80px);
+                @include fontSize(20px);
+                line-height: 1;
+                display: inline-block;
+                background-color: #4c79a6;
+                border-radius: 5px;
+                background-image: url(/photocon/common/images/icon_subscribes.png);
+                background-size: 24px;
+                background-repeat: no-repeat;
+                background-position: top 45% left 40px;
+
+                &:hover {
+                    opacity: 0.8;
+                }
+            }
+        }
+
+    }
+}
