@@ -42,7 +42,8 @@ const SETTING = {
             'src': './src/js/',
             'dist': ROOT_PATH + 'assets/js/',
             'fileName': [ // main file
-                'main.js'
+                'main.js',
+                'photocon.js'
             ]
         }
     ]

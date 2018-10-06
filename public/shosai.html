@@ -63,7 +63,7 @@ function changeImg(id){
 
 
 <!-- #wrapperに.photocon付与 -->
-<div id="wrapper" class="photocon">
+<div id="wrapper" class="photocon photocon_detail">
 <!-- #wrapperに.photocon付与 -->
 
 
@@ -103,7 +103,7 @@ function changeImg(id){
 <div class="fotopus-header-item-wrapper">
 <a class="fotopus-header-item fotopus-header-item-mypage" href="https://fotopus.com/index.html/module/Toppage/action/Jump/links/mypage">MyPage</a>
 <a class="fotopus-header-item fotopus-header-item-menu" href="javascript:void(0);">メニュー<span class="fotopus-only-pc"> ▼</span></a>
-<a class="fotopus-header-item fotopus-only-pc" href="https://fotopus.com/index.html/module/Toppage/action/Jump/links/contributelibrary_action">写真投稿</a>
+<a class="fotopus-header-item fotopus-only-pc" href="https://fotopus.com/index.html/module/Toppage/action/Jump/links/detaillibrary_action">写真投稿</a>
 <a class="fotopus-header-item fotopus-only-pc" href="https://fotopus.com/index.html/module/Toppage/action/Jump/links/photosearch_action/">写真検索</a>
 <a class="fotopus-header-item fotopus-only-pc" href="https://fotopus.com/index.html/module/Toppage/action/Jump/links/mypage">MyPage</a>
 <a class="fotopus-header-item fotopus-only-pc" href="https://fotopus.com/index.html/module/Toppage/action/Jump/links/user_reg/">製品ユーザー登録</a>
@@ -132,7 +132,7 @@ function changeImg(id){
 <li id="log_status_sp" class="fotopus-menu-content-signin">
 </li>
 <li class="fotopus-menu-list-item"><a href="https://fotopus.com/index.html/module/Toppage/action/Jump/links/mypage">MyPage</a></li>
-<li class="fotopus-menu-list-item"><a href="https://fotopus.com/index.html/module/Toppage/action/Jump/links/contributelibrary_action">写真投稿</a></li>
+<li class="fotopus-menu-list-item"><a href="https://fotopus.com/index.html/module/Toppage/action/Jump/links/detaillibrary_action">写真投稿</a></li>
 <li class="fotopus-menu-list-item"><a href="https://fotopus.com/index.html/module/Toppage/action/Jump/links/photosearch_action/">写真検索</a></li>
 </ul>
 <ul class="fotopus-menu-list fotopus-menu-list-drop">
@@ -260,7 +260,8 @@ function changeImg(id){
 </div>
 </div>
 </section>
-</div><div class="cont">
+</div>
+<div class="cont">
 <header id="top">
 <div class="copy">
 
@@ -270,95 +271,161 @@ function changeImg(id){
 <h1>応募写真詳細</h1>
 </div>
 </header>
-
+</div><!-- /.cont -->
 
 <!-- 編集箇所ここから　-->
+<!-- .photocon_section-->
 <section class="photocon_section">
-<div class="photocon_section_inner">
+	<div class="photocon_section_inner">
+
+		<!-- .head -->
+		<div class="photocon_head photocon_head--noborder">
+			<div class="photocon_head_kv">
+				<a href="https://fotopus.com/photocon/dogcat/">
+					<img src="https://fotopus.com/images/photocon/dogcat/sub_visual.jpg" alt="PECO×OLYMPUS 愛犬・愛猫 写真コンテスト" />
+				</a>
+			</div>
+		</div>
+		<!-- //.head -->
+
+		<!-- .photocon_detail_menu -->
+		<div class="photocon_detail_menu">
+			<script type="text/javascript">
+				if(( $.cookie('displayControl') != 0 ) && ( $.cookie('displayControl') != null )){
+					document.write('<a href="' + prevUrlVal + '" class="photocon_detail_menu_text-gallery">一覧へ戻る</a>');
+				}else{
+					document.write('<a href="https://fotopus.com/index.html/module/PhcLibrary/action/ThemeDetail/theme_cd/509/order/new" class="photocon_detail_menu_text">一覧へ戻る</a>');
+				}
+			</script>
+			<!-- <p class="photocon_detail_menu_text">詳細ページ</p> -->
+
+			<nav id="photoconNavi">
+				<ul class="photocon_detail_menu_navi">
+					<li class="photocon_detail_menu_navi_prev">
+						<a href="https://fotopus.com/index.html/module/PhcLibrary/action/ImageDetail/theme_cd/509/posi/3#imgfocus"><span></span></a>
+					</li>
+					<li class="photocon_detail_menu_navi_hdButton">
+						<!-- HD Slide button -->
+						<div id="newflashButton" class="HD">
+							<script type="text/javascript">
+								var so = new SWFObject("/common/gallery/hdslide/hivision3.swf", "img", "171", "28", "9.0.0", "#FFFFFF");
+											so.addParam("allowFullScreen", "true");
+								so.addParam("quality", "best");
+								so.addParam("menu", "false");
+								so.addParam("wmode", "transparent");
+								so.addVariable("xmlUrl", "https://fotopus.com/index.html/module/Similar/action/HdDetail/cd/3130056/t/11509");
+								so.write("newflashButton");
+							</script>
+						</div><!-- /#newflashButton -->
+						<div class="photocon_hdbutton">
+							<a href="#" id="hdstart">HDスライド</a>
+						</div>
+						<!-- // HD Slide button -->
+					</li>
+					<li class="photocon_detail_menu_navi_next">
+						<a href="https://fotopus.com/index.html/module/PhcLibrary/action/ImageDetail/theme_cd/509/posi/5#imgfocus"><span></span></a>		
+					</li>
+				</ul>
+			</nav>
+			<!-- /.photocon_detail_menu_navi -->
+
+		</div>
+		<!-- .photocon_detail_menu -->
+
+	</div><!-- //.photocon_section_inner -->
+</section><!-- //.photocon_section -->
+
+<!-- .photocon_section-->
+<section class="photocon_section photocon_detail_photo">
+
+	<div class="photocon_detail_photo_inner">
+
+		<figure id="photoconDetailImg" class="photocon_detail_photo_image">
+			<img src="https://images01.fotopus.net/photos/library/ma/part006/3100000/3130000/Large/3130056.jpg?dm=1538783282" style="border-style:none;" alt="ボーダー・コリー/コリー/シェットランド・シープドッグの投稿写真。タイトルはロックオン">
+		</figure>
+		<h2 class="photocon_detail_photo_title">ロックオン</h2>
+
+	</div>
+	<!-- //.photocon_detail_photo_inner-->
+
+</section><!-- //.photocon_section-->
+
+<!-- .photocon_section-->
+<section class="photocon_section">
+	<div class="photocon_section_inner">
+
+		<!-- information -->
+		<div class="photocon_detail_information">
+
+			<div class="photocon_detail_information_block">
+
+				<div class="photocon_detail_information_user">
+					<div class="photocon_detail_information_user_icon">
+						<img src="https://fotopus.com/images/myfoto/man/man05.jpg?689015" alt="">
+					</div>
+					<div class="photocon_detail_information_user_text">
+						<p class="photocon_detail_information_user_name">
+							<a href="https://fotopus.com/index.html/module/PhcLibrary/action/MyFotoPus/mem_cd/2015112300001772449/theme_cd/509/t/i">Chi-tan（1465）</a>
+						</p>
+						<p class="photocon_detail_information_user_comment">
+							目線の先はテニスボール。　我先にキャッチしようとボーダーコリーも必死です
+						</p>
+					</div>
+				</div>
+				<!--//._user-->
+
+				<dl class="photocon_detail_information_url">
+					<dt class="photocon_detail_information_url_title">このページのURL：</dt>
+					<dd class="photocon_detail_information_url_inputbox">
+						<input id="urlBox" class="photocon_detail_information_url_inputbox_inputarea" readonly="" value="https://fotopus.com/index.html/module/PhcLibrary/action/ImageDetail/cont_cd/3130051">
+						<a id="urlSelectBtn" class="photocon_detail_information_url_inputbox_button" href="javascript:void(0);">URLを選択する</a>
+					</dd>
+				</dl><!-- //._url -->
+			
+			</div>
+
+			<div class="photocon_detail_information_block">
+
+				<div class="photocon_detail_information_contest">
+
+					<dl class="photocon_detail_information_contest_name">
+						<dt>コンテスト名称</dt>
+						<dd>PECO×OLYMPUS 愛犬・愛猫 写真コンテスト</dd>
+					</dl>
+
+					<dl class="photocon_detail_information_contest_theme">
+						<dt>テーマ</dt>
+						<dd><a href="https://fotopus.com/index.html/module/PhcLibrary/action/ThemeDetail/theme_cd/509">愛犬部門</a></dd>
+					</dl>
+
+					<dl class="photocon_detail_information_contest_date">
+						<dt>応募日時</dt>
+						<dd>2018-10-05 20:22:32</dd>
+					</dl>			
+
+				</div><!-- //._contest -->
+
+				
+				<dl class="photocon_detail_information_tags">
+					<dt class="photocon_detail_information_tags_title">タグ：</dt>
+					<dd class="photocon_detail_information_tags_items">
+						<a href="https://fotopus.com/search/exec/index/srchKind/searchModel/mstr/32000000000#resultList">犬</a>
+						<a href="https://fotopus.com/search/exec/index/srchKind/searchModel/mstr/32001700000#resultList">ボーダー・コリー/コリー/シェットランド・シープドッグ</a>
+					</dd>
+				</dl>
+				<!-- //._tags -->
+
+			</div>
+
+		</div>
+		<!-- //._information -->
+
+	</div><!-- //.photocon_detail_photo_inner-->
+</section><!-- //.photocon_detail_photo-->
 
 
-
-
-<p class="mainImg"><a href="https://fotopus.com/photocon/dogcat/"><img src="https://fotopus.com/images/photocon/dogcat/sub_visual.jpg" alt="PECO×OLYMPUS 愛犬・愛猫 写真コンテスト" /></a></p>
- <a id="imgfocus" name="imgfocus"></a>
-<div id="breadcrumbs">
-<div class="tab">
-<script type="text/javascript">
-<!--
-	if(( $.cookie('displayControl') != 0 ) && ( $.cookie('displayControl') != null )){
-		document.write('<a href="' + prevUrlVal + '" class="icon_gallery">一覧へ戻る</a>');
-	}else{
-		document.write('<a href="https://fotopus.com/index.html/module/PhcLibrary/action/ThemeDetail/theme_cd/509/order/new" class="icon_gallery">一覧へ戻る</a>');
-	}
--->
-</script>
-<p class="icon_detail">詳細ページ</p>
-</div><!-- /.tab -->
-</div><!-- #breadcrumbs -->
-
-
-
-
-<div id="large_area"  class="clearfix">
-<div id="largeimage">
-<div id="kumipics_imgSection">
-<p><img src="https://images01.fotopus.net/photos/library/ma/part006/3100000/3130000/Large/3130056.jpg?dm=1538783282" style="border-style:none;" alt="ボーダー・コリー/コリー/シェットランド・シープドッグの投稿写真。タイトルはロックオン" /></p>
-</div><!-- #kumipics_imgSection -->
-</div><!-- #largeimage -->
-
-<div class="other_photo">
-<p id="hdButton"><a href="#" id="hdstart">HDスライド</a></p>
- <a href="https://fotopus.com/index.html/module/PhcLibrary/action/ImageDetail/theme_cd/509/posi/3#imgfocus" class="btn02">前の写真</a> 		 <a href="https://fotopus.com/index.html/module/PhcLibrary/action/ImageDetail/theme_cd/509/posi/5#imgfocus" class="btn02">次の写真</a>  </div><!-- /.other_photo -->
-
-<div id="newflashButton" class="HD"><img src="https://fotopus.com/images/design_img/top/btn_galleryD.gif" alt="HDスライド" width="101" height="20" />
-<script type="text/javascript">
-            var so = new SWFObject("/common/gallery/hdslide/hivision3.swf", "img", "171", "28", "9.0.0", "#FFFFFF");
-						so.addParam("allowFullScreen", "true");
-            so.addParam("quality", "best");
-            so.addParam("menu", "false");
-			so.addParam("wmode", "transparent");
-			so.addVariable("xmlUrl", "https://fotopus.com/index.html/module/Similar/action/HdDetail/cd/3130056/t/11509");
-            so.write("newflashButton");
-        </script>
-</div><!-- /#newflashButton -->
-
-</div><!-- /#large_area -->
-
-
-
-<section class="sec03 clearfix">
-<div id="largelist"> <dl>
-<dt>コンテスト名称：</dt>
-<dd>PECO×OLYMPUS 愛犬・愛猫 写真コンテスト</dd>
-<dt>テーマ：</dt>
-<dd><a href="https://fotopus.com/index.html/module/PhcLibrary/action/ThemeDetail/theme_cd/509">愛犬部門</a></dd>
-<dt>ニックネーム：</dt>
-<dd><a href="https://fotopus.com/index.html/module/PhcLibrary/action/MyFotoPus/mem_cd/2015112300001772449/theme_cd/509/t/i">Chi-tan</a></dd>
-<dt>タイトル：</dt>
-<dd>ロックオン</dd>
-<dt>応募日：</dt>
-<dd>2018-10-05 20:22:32</dd>
-<dt>コメント：</dt>
-<dd>目線の先はテニスボール。　我先にキャッチしようとボーダーコリーも必死です</dd>
-<dt>タグ：</dt>
-<dd><a href="https://fotopus.com/search/exec/index/srchKind/searchModel/mstr/32000000000#resultList">犬</a> &nbsp;>&nbsp;<a href="https://fotopus.com/search/exec/index/srchKind/searchModel/mstr/32001700000#resultList">ボーダー・コリー/コリー/シェットランド・シープドッグ</a> </dd>
-</dl>
-</div><!-- /#largelist -->
-</section><!-- /.sec03 -->
-
-
-<section class="sec04"> <div class="pageURL">このページのURL：</div>
-<textarea id="tagPhotoUrl" name="textarea" wrap="soft" onClick="this.select();">https://fotopus.com/index.html/module/PhcLibrary/action/ImageDetail/cont_cd/3130056</textarea>
-<div class="sentence"><a href="javascript:void(0);" onClick="javascript:document.getElementById('tagPhotoUrl').select();">URLを選択する</a> <span class="text_s">&nbsp;※コピーしてお使いください。</span> </div>
-<!-- /.sentence -->
-</section><!-- /.sec04 -->
-
-
-
-</div>
-</section>
 <!-- // 編集箇所ここまで -->
-
+<div class="cont">
 <aside class="col05 cf">
 <ul>
 <li><a href="http://cameras.olympus.com/ja-jp/omd" target="_blank"><img src="https://fotopus.com/top/images/img02_02.jpg" height="146" width="183" alt="OLYMPUS OM-D"></a></li>
@@ -412,5 +479,12 @@ var xmlval = "https://fotopus.com/index.html/module/Similar/action/HdDetail/cd/3
 <meta http-equiv="refresh" content="0;url=/error/noscript.html">
 </noscript>
 <script type="text/javascript" src="https://fotopus.com/shr/js/fotopus-layout.js"></script>
+
+
+
+<script type="text/javascript" src="/assets/js/main.js"></script>
+<script src="/assets/js/photocon.js"></script>
+
+
 </body>
 </html>
