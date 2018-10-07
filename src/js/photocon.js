@@ -57,6 +57,8 @@ if ( photoconDetailImg ) {
             
         };
 
+        window.addEventListener('DOMContentLoaded', scrollFunc, false);
+        window.addEventListener('resize', scrollFunc, false);
         window.addEventListener('scroll', scrollFunc, false);
         window.addEventListener('load', scrollFunc, false);
 

@@ -485,6 +485,7 @@
 
 #wrapper.photocon .photocon_detail_information_user_comment {
   font-size: 14px;
+  word-break: break-word;
 }
 
 #wrapper.photocon .photocon_detail_information_tags {

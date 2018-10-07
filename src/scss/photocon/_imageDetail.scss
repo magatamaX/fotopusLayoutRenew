@@ -259,6 +259,7 @@
 
                     &_comment {
                         @include fontSize(14px);
+                        word-break: break-word;
                     }
                 } //user
 
