@@ -9,15 +9,13 @@
 
                 &_text {
                     color: #4c79a6 !important;
+                    display: inline-block;
+                    @include pl(14px);
                     @include fontSize(16px);
-                    text-decoration: underline;
+                    @include arrowAbs($color:#4c79a6, $size:7, $width:1,$layout:left,$position:0,$direction:left)
 
                     &:hover {
-                        text-decoration: none;
-                    }
-
-                    &::before {
-                        content: '× ';
+                        text-decoration: underline;
                     }
                 }
 

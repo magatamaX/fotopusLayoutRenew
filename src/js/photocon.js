@@ -11,7 +11,7 @@ if ( photoconDetailImg ) {
     let timer = false;
 
     const ua = window.navigator.userAgent;
-    const $photo = photoconDetailImg;
+    const $photo = photoconDetailImg.querySelector('img');
 
     const func = () => {
         if (ua.indexOf('iPhone') > 0 || ua.indexOf('iPad') > 0 || ua.indexOf('Android') > 0 || ua.indexOf('Mobile') > 0) {

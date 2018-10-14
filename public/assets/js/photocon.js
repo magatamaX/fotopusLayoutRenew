@@ -14,7 +14,7 @@ if (photoconDetailImg) {
     var timer = false;
 
     var ua = window.navigator.userAgent;
-    var $photo = photoconDetailImg;
+    var $photo = photoconDetailImg.querySelector('img');
 
     var func = function func() {
         if (ua.indexOf('iPhone') > 0 || ua.indexOf('iPad') > 0 || ua.indexOf('Android') > 0 || ua.indexOf('Mobile') > 0) {
